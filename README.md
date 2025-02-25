@@ -1,6 +1,7 @@
 # Javascript Quiz app
 
 This is a simple quiz app created with Vite and React. It uses Zustand for state management and Material UI for styling.
+For the code show is used the React Syntax Highlighter.
 
 ## Instalation
 
