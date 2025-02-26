@@ -22,7 +22,9 @@ export const useQuestions = create<QuestionsState>()(
           loading: false,
 
           fetchQuestions: async (limit: number) => {
-            const response = await fetch('http://localhost:5173/data.json')
+            const response = await fetch(
+              `${import.meta.env.VITE_API_URL}/data.json`
+            )
             const data = await response.json()
 
             const questions = data
