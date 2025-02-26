@@ -1,5 +1,8 @@
+import { Stack } from '@mui/material'
 import { useQuestions } from '../store/questions'
 import { Question } from './Question'
+import { Navigation } from './Navigation'
+import { Footer } from './Footer'
 
 export const Game = () => {
   const questions = useQuestions((state) => state.questions)
@@ -7,5 +10,11 @@ export const Game = () => {
 
   const questionInfo = questions[currentQuestion]
 
-  return <Question info={questionInfo} />
+  return (
+    <Stack direction="column" gap={4}>
+      <Question info={questionInfo} />
+      <Navigation />
+      <Footer />
+    </Stack>
+  )
 }
